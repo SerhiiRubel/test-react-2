@@ -1,6 +1,6 @@
 const INITIAL_STATE = [
-  'USER1',
-  'USER2',
+  'IVAN',
+  'Serhii',
 ];
 
 export default function users(state = INITIAL_STATE, action ) {
@@ -8,11 +8,13 @@ export default function users(state = INITIAL_STATE, action ) {
     case 'ADD_USER': {
       return [
         ...state,
-        action.userName,
+        action.usersName,
       ];
     }
     case 'DELETE_USER': {
-      return state;
+      console.log(action.usersName);
+      let deleteUser = [...state];
+      return deleteUser.splice();
     }
     default: return state;
   }

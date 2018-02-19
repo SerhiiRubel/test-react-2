@@ -32,7 +32,7 @@ class HomePage extends Component {
       .then(data => {
         this.initialData = data;
         this.setState({
-          data: this.initialData,
+          data: Array.from(this.initialData),
           activeUser: data[0],
           listPages: Math.ceil(data.length  / 15),
         })
